@@ -28,10 +28,18 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
       const regex = new RegExp(wordToMach, 'gi');
       return place.city.match(regex) || place.state.match(regex)
-
     });
   }
+  function displayMatches() {
+    console.log(this.value);
+  }
+  const searchInput = document.querySelector('.search');
+  const suggestions = document.querySelector('.suggestions');
 
+  searchInput.addEventListener('change', displayMatches);
+  searchInput.addEventListener('keyup', displayMatches);
+
+  
 </script>
   </body>
 </html>
