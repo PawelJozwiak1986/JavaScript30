@@ -108,6 +108,10 @@ function handleCheck(e) {
 
       checkboxes.forEach(checkbox => {
       console.log(checkbox)
+      if (checkbox === this || checkbox === lastChecked){
+        inBetween = false;
+        console.log('sprawdzamy');
+      }
     });
   }
   
