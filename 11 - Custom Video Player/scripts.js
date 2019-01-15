@@ -6,3 +6,17 @@ const progressBar = player.querySelector('.progress__filled');
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
+
+// Functions 
+
+function togglePlay() {
+  const method = video.paused ? 'play' : 'pause';
+  video[method]();
+  console.log(togglePlay)
+}
+
+function updateButton() {
+  const icon = this.paused ? '►' : '❚ ❚';
+  console.log(icon);
+  toggle.textContent = icon;
+}
