@@ -7,9 +7,14 @@
 </head>
 <body>
 <script>
-  window.addEventListener('keyup', (e) =>{
+  const pressed = [];
+  const secretCode = 'wesbos'
+
+  window.addEventListener('keyup', (e) => {
     console.log(e.key)
-  })
+    pressed.push(e.key)
+    pressed.splice(- secretCode.length, pressed.length - secretCode.length)
+  });
 </script>
 </body>
 </html>
