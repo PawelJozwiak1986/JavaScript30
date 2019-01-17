@@ -60,10 +60,10 @@
     const sliderImages = document.querySelectorAll('.slide-in'); 
     
     let checkSlide = (e) => {
-      console.log(e)
+      console.count(e)
     }; 
 
-    window.addEventListener('scroll',checkSlide)
+    window.addEventListener('scroll',debounce(checkSlide))
     </script>
 
   <style>
