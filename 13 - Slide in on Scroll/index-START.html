@@ -57,8 +57,14 @@
         if (callNow) func.apply(context, args);
       };
     }
+    const sliderImages = document.querySelectorAll('.slide-in'); 
+    
+    let checkSlide = (e) => {
+      console.log(e)
+    }; 
 
-  </script>
+    window.addEventListener('scroll',checkSlide)
+    </script>
 
   <style>
     html {
