@@ -31,9 +31,21 @@
   const items = [];
 
   function addItem(e) {
-    console.log('hello');
+    e.preventDefault();
+    const text = (this.querySelector('[name=item]')).value;
+    const item = {
+      text, //////Short hand porperty es 6 of text: text,
+      done: false
+    };
+    items.push(item);
+    this.reset();
+   
   }
-addItems.addEventListener('submit',addItem);
+  function populateList(plates=[],){
+
+  }
+
+  addItems.addEventListener('submit',addItem);
 </script>
 
 
