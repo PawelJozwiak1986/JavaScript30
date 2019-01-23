@@ -39,8 +39,11 @@
   const text = document.querySelector('h1')
 
   function shadow (e) {
-  
-}
+
+  const width = hero.offsetWidth;
+  const height = hero.offsetHeight;
+  //// ES 6  const { offsetWidth: width, offsetHeight: height } = hero;
+  }
 
 hero.addEventListener('mousemove',shadow);
 
