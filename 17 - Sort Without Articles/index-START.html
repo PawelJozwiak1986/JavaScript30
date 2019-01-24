@@ -52,14 +52,11 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 function strip(bandname){
   return bandname.replace(/^(a |the | an)/i, '').trim();
 }
-const sortedBands = bands.sort(function(a, b){
-  if(a > b){
-    return 1;
-  }else{
-    return -1;
+const sortedBands = bands.sort((a, b) => {
+  return strip(a) > strip(b) ? 1 : -1;
 
   }
-});
+);
 console.log(sortedBands);
 
 </script>
