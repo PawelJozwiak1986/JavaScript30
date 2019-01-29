@@ -28,7 +28,13 @@ function paintToCanvas(){
 
 return setInterval(() => {
   ctx.drawImage(video, 0, 0, width, height);
+  let pixels = ctx.getImageData(0, 0, width, height);
+
+  pixels = redEffect(pixels);
+
+  ctx.putImageData(pixels, 0, 0);
 },16 );
+
 
 function takePhoto() {
   // sound
@@ -43,6 +49,13 @@ function takePhoto() {
   link.innerHTML = `<img src="${data}" alt="Handsome Man " />`;
   strip.insertBefore(link, strip.firstChild);
 }
+function redEffect(pixels) {
+  for(let i = 0; i < pixels.data.length; i+=4) {
+    pixels.data[i] = pixels.data[i] + 100;         // r
+    pixels.data[i + 1] = pixels.data[i + 1] - 50;  // g
+    pixels.data[i + 2] = pixels.data[i + 2] + 0.5; // b
+  }
+  return pixels;
 
 getVideo();
 video.addEventListener("canplay", paintToCanvas);
