@@ -24,7 +24,9 @@ body {
   transform: scale(0.98);
   transition: transform 0.5s;
 }
-
+body.fixed-nav .site-wrap {
+  transform: scale(1);
+}
 header {
   text-align: center;
   height: 50vh;
